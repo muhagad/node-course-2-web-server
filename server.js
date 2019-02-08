@@ -3,7 +3,7 @@ const hbs = require('hbs');
 // const pug = require('pug');
 const fs = require('fs');
 const app = express();
-
+const port = process.env.port || 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs'); // setting template engine handlebars
@@ -59,6 +59,6 @@ app.get('/bad', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-    console.log("server is up on port 3000.");
+app.listen(port, () => {
+    console.log(`server is up on port ${port}.`);
 });
