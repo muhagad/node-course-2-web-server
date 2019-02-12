@@ -1,0 +1,59 @@
+getting heroku account
+installing heroku command line tool
+
+Heroku commands:
+
+heroku --help
+heroku login
+
+deploying app:
+#getting ssh key from github
+heroku keys:add # will find the id_rsa.pub
+
+#to show all keys
+heroku keys 
+
+# to remove ssh key from heroku
+
+heroku keys:remove 
+
+#communicate with heroku server
+ssh -v git@heroku.com 
+
+# heroku expects to have every thing in place to work properly
+
+# changing our app port by making it dynamic. using environment variables
+
+# in linux / mac using command :
+env
+# in windows 
+set
+
+by using process.env.PORT;
+
+inside package.json 
+adding to scripts a new property in string
+"start": "node app.js"
+
+# we can now run our app by typing
+npm start
+
+# we will have modified files if existed
+git status
+
+git add 
+git commit -m "any message"
+
+git push
+
+#next we will run 
+heroku create 
+
+git push heroku
+
+heroku open
+
+
+
+
+
