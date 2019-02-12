@@ -42,14 +42,21 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
   res.render('home', {
-    pageTitle: 'Home Page by Pug engine',
+    pageTitle: 'Home Page',
     paragraph: 'welcome to my Home page'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    pageTitle: 'About Page trasta'
+    pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects', {
+    pageTitle: "my projects page",
+    sometext: "my projects is will done"
   });
 });
 
